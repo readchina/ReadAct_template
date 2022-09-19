@@ -1,0 +1,3 @@
+person_id,family_name,first_name,language,sex,rustication,birthyear,deathyear,alt_name,place_of_birth,social_position,narrative_age,neibu_access,wikidata_id,source_1,page_1,source_2,page_2,narrative_status,commentary,note,created,created_by,last_modified,last_modified_by
+AG0001,Lu,Xun,en,male,0,1881,1936,Zhou Shuren,SP0048,,,,Q23114,https://en.wikipedia.org/wiki/Lu_Xun,ONLINE SOURCE,,,,,,2017-07-03,LH,2020-04-02,DP
+AG0001,鲁,迅,zh,male,0,1881,1936,周树人,SP0048,,,,Q23114,https://en.wikipedia.org/wiki/Lu_Xun,ONLINE SOURCE,,,,,,2017-07-03,LH,2020-04-02,DP

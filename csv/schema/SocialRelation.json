@@ -1,0 +1,143 @@
+{
+  "fields": [
+    {
+      "name": "soc_rel_id",
+      "description": "SR and a five-digit number (leading zeros)",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "unique": true,
+        "maxLength": 7,
+        "pattern": "^SR[0-9]{5}"
+      }
+    },
+    {
+      "name": "ego",
+      "description": "Agent.agent_id",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "pattern": "^AG[0-9]{4}"
+      }
+    },
+    {
+      "name": "related",
+      "description": "Agent.agent_id",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "pattern": "^AG[0-9]{4}"
+      }
+    },
+    {
+      "name": "relation",
+      "description": "Relation based on UCREL/USAS semantic classes",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "pattern": "S(3|4)(\\.[0-9](-|\\+)?){1,}[fm]?[ey]?"
+      }
+    },
+    {
+      "name": "rel_zh",
+      "description": "Chinese name of relation",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "minLength": 2
+      }
+    },
+    {
+      "name": "rel_en",
+      "description": "English name of relation",
+      "type": "string",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "pattern": "(^http.*|W[0-9]{4})"
+      }
+    },
+    {
+      "name": "page",
+      "type": "string",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "note",
+      "description": "structural entry for internal notes",
+      "type": "string",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "created",
+      "description": "structural entry creation date of entry",
+      "type": "date",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "created_by",
+      "description": "structural entry acronym of project member creating entry",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "pattern": "[A-Z]{2}"
+      }
+    },
+    {
+      "name": "last_modified",
+      "description": "structural entry last modification date",
+      "type": "date",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "last_modified_by",
+      "description": "structural entry acronym of project member last modifying entry",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "pattern": "[A-Z]{2}"
+      }
+    }
+  ],
+  "primaryKey": "soc_rel_id",
+  "missingValues": [
+    ""
+  ],
+  "foreignKeys": [
+    {
+      "fields": "ego",
+      "reference": {
+        "resource": "agent",
+        "fields": "agent_id"
+      }
+    },
+    {
+      "fields": "related",
+      "reference": {
+        "resource": "agent",
+        "fields": "agent_id"
+      }
+    },
+    {
+      "fields": "source",
+      "reference": {
+        "resource": "work",
+        "fields": "work_id"
+      }
+    }
+  ]
+}

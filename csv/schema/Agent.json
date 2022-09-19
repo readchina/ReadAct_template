@@ -1,0 +1,122 @@
+{
+  "fields": [
+    {
+      "name": "agent_id",
+      "description": "AG and a four-digit number (leading zeros)",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "unique": true,
+        "maxLength": 6,
+        "pattern": "^AG[0-9]{4}"
+      }
+    },
+    {
+      "name": "old_id",
+      "type": "string",
+      "description": "id from previous id schema",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "agent_type",
+      "description": "type of agent I or P",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "pattern": "I|P"
+      }
+    },
+    {
+      "name": "wikidata_id",
+      "description": "Wikidata ID of agent",
+      "type": "string",
+      "constraints": {
+        "required": false,
+        "pattern": "^(Q[0-9]+)*"
+      }
+    },
+    {
+      "name": "fictionality",
+      "description": "Is it a fictional agent?",
+      "type": "string",
+      "constraints": {
+        "required": false,
+        "pattern": "F?"
+      }
+    },
+    {
+      "name": "language",
+      "description": "structural entry for key resolution",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "minLength": 2
+      }
+    },
+    {
+      "name": "commentary",
+      "type": "string",
+      "description": "commentary on person, e.g. affiliations, significant events, etc.",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "note",
+      "type": "string",
+      "description": "structural entry for internal notes",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "created",
+      "description": "structural entry creation date of entry",
+      "type": "date",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "created_by",
+      "description": "structural entry acronym of project member creating entry",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "pattern": "[A-Z]{2}"
+      }
+    },
+    {
+      "name": "last_modified",
+      "description": "structural entry last modification date",
+      "type": "date",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "last_modified_by",
+      "description": "structural entry acronym of project member last modifying entry",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "pattern": "[A-Z]{2}"
+      }
+    }
+  ],
+  "primaryKey": "agent_id",
+  "missingValues": [
+    ""
+  ],
+  "foreignKeys": [
+    {
+      "fields": "language",
+      "reference": {
+        "resource": "iso-lang-code",
+        "fields": "iso_code"
+      }
+    }
+  ]
+}
