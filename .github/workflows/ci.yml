@@ -40,7 +40,7 @@ jobs:
         with:
           python-version: '3.9'
       - name: Use pip Cache  
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
