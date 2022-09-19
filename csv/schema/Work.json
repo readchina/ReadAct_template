@@ -1,0 +1,138 @@
+{
+  "fields": [
+    {
+      "name": "work_id",
+      "description": "W and a four-digit number (leading zeros)",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "unique": true,
+        "maxLength": 5,
+        "pattern": "^W[0-9]{4}"
+      }
+    },
+    {
+      "name": "old_id",
+      "description": "id from previous id schema",
+      "type": "string",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "work_type",
+      "description": "type of work SS or PS or AW or Q",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "pattern": "SS|PS|AW|Q"
+      }
+    },
+    {
+      "name": "language",
+      "description": "structural entry for key resolution",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "minLength": 2
+      }
+    },
+    {
+      "name": "creator",
+      "description": "author, artist, director, etc.",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "pattern": "^AG[0-9]{4}"
+      }
+    },
+    {
+      "name": "narrator",
+      "description": "main narrator of fictional text",
+      "type": "string",
+      "constraints": {
+        "required": false,
+        "pattern": "^AG[0-9]{4}"
+      }
+    },
+    {
+      "name": "fictionality",
+      "description": "Is the work itself fictional?",
+      "type": "string",
+      "constraints": {
+        "required": false,
+        "pattern": "F?"
+      }
+    },
+    {
+      "name": "commentary",
+      "type": "string",
+      "description": "free form commentary on the work",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "note",
+      "type": "string",
+      "description": "structural entry for internal notes",
+      "constraints": {
+        "required": false
+      }
+    },
+    {
+      "name": "created",
+      "description": "structural entry creation date of entry",
+      "type": "date",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "created_by",
+      "description": "structural entry acronym of project member creating entry",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "pattern": "[A-Z]{2}"
+      }
+    },
+    {
+      "name": "last_modified",
+      "description": "structural entry last modification date",
+      "type": "date",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "last_modified_by",
+      "description": "structural entry acronym of project member last modifying entry",
+      "type": "string",
+      "constraints": {
+        "required": true,
+        "pattern": "[A-Z]{2}"
+      }
+    }
+  ],
+  "primaryKey": "work_id",
+  "missingValues": [
+    ""
+  ],
+  "foreignKeys": [
+    {
+      "fields": "creator",
+      "reference": {
+        "resource": "agent",
+        "fields": "agent_id"
+      }
+    },
+    {
+      "fields": "language",
+      "reference": {
+        "resource": "iso-lang-code",
+        "fields": "iso_code"
+      }
+    }
+  ]
+}
