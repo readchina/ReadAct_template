@@ -1,6 +1,6 @@
 # ReadAct_template
 
-[![CI](https://github.com/readchina/ReadAct/actions/workflows/ci.yml/badge.svg)](https://github.com/readchina/ReadAct/actions/workflows/ci.yml)
+[![CI](https://github.com/readchina/ReadAct_template/actions/workflows/ci.yml/badge.svg)](https://github.com/readchina/ReadAct_template/actions/workflows/ci.yml)
 
 This templates provides an empty copy of [ReadAct](https://github.com/readchina/ReadAct) for those interessted in extending its approach to their own data set. The template allows for much greater freedom during development compared to the traditional model of collaborting via forks. 
 
@@ -39,13 +39,20 @@ Lastly, all views in `datapackage.json`  are using the URL of the template repo:
 }
 ```
 
-We also recommend to insert your own 'DOI' as soon as it is available where appropriate. 
+We also recommend to insert your own 'DOI' as soon as it is available where appropriate, and to update the markdown pill at the top of this file that points to the CI of the template repo, so that it points to your new repo.
 
-## Requirements for Local Development
+## Requirements for local development
 
+-  Python: `>=3.8`
 - [frictionless-py](https://github.com/frictionlessdata/frictionless-py)
+- [ReadActor](https://github.com/readchina/ReadActor) (*helper module*)
+- [daff](https://github.com/paulfitz/daff)(*for better csv diffing*)
 - [basex](https://basex.org) (*testing only*)
 - [textql](https://github.com/dinedal/textql) (*testing only*)
+
+Provided you have python installed, run:
+
+`pip install ReadActor pandas frictionless csvkit daff`
 
 ## New Contributors
 
