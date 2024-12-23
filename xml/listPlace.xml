@@ -1,8 +1,1 @@
-<listPlace xmlns="http://www.tei-c.org/ns/1.0">
-  <place xml:id="SP0436" type="PL">
-    <placeName>unknown</placeName>
-    <location>
-      <geo>0.0 0.0</geo>
-    </location>
-  </place>
-</listPlace>
+<listPlace xmlns="http://www.tei-c.org/ns/1.0"><place xml:id="SP0436" type="PL"><placeName>unknown</placeName><location><geo>0.0 0.0</geo></location></place></listPlace>

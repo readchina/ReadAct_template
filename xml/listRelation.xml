@@ -1,17 +1,1 @@
-<listRelation xmlns="http://www.tei-c.org/ns/1.0">
-  <listRelation type="personal">
-    <relation xml:id="SR99999" ana="熟人" key="S3.1" name="acquaintance" type="personal" ref="#W0414" mutual="#AG0626 #AG0626"/>
-  </listRelation>
-  <listRelation type="social">
-    <relation name="member" type="social" active="#AG9999" passive="#AG0626" ref="#W0414"/>
-  </listRelation>
-  <listRelation type="reading-act">
-    <relation type="reading-act" xml:id="A99999" active="#AG0626" key="AT01" name="to-read" ref="#W0414" from-custom="XXXX" to-custom="XXXX" change="2022-09-19" resp="DP">
-      <desc>
-        <bibl type="source" source="#W0414">
-          <biblScope unit="page"/>
-        </bibl>
-      </desc>
-    </relation>
-  </listRelation>
-</listRelation>
+<listRelation xmlns="http://www.tei-c.org/ns/1.0"><listRelation type="personal"><relation xml:id="SR99999" ana="熟人" key="S3.1" name="acquaintance" type="personal" ref="#W0414" mutual="#AG0626 #AG0626"/></listRelation><listRelation type="social"><relation name="member" type="social" active="#AG9999" passive="#AG0626" ref="#W0414"/></listRelation><listRelation type="reading-act"><relation type="reading-act" xml:id="A99999" active="#AG0626" key="AT01" name="to-read" ref="#W0414" from-custom="XXXX" to-custom="XXXX" change="2022-09-19" resp="DP"><desc><bibl type="source" source="#W0414"><biblScope unit="page"/></bibl></desc></relation></listRelation></listRelation>

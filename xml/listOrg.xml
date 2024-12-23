@@ -1,6 +1,1 @@
-<listOrg xmlns="http://www.tei-c.org/ns/1.0">
-  <org xml:id="AG9999">
-    <orgName xml:lang="en" type="main">unknown</orgName>
-    <placeName ref="#SP0436"/>
-  </org>
-</listOrg>
+<listOrg xmlns="http://www.tei-c.org/ns/1.0"><org xml:id="AG9999"><orgName xml:lang="en" type="main">unknown</orgName><placeName ref="#SP0436"/></org></listOrg>
